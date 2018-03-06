@@ -24,4 +24,9 @@ public class Produkt {
         return cena;
     }
     
+    public String toString()
+    {
+        return nazwa + " ("+cena+"zł)";
+    }
+    
 }
