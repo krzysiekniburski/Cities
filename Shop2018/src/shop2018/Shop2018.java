@@ -30,6 +30,7 @@ public class Shop2018 {
         koszyk.dodaj(maka);
         
         System.out.println(koszyk.doZaplaty());
+        
 
         
     }
