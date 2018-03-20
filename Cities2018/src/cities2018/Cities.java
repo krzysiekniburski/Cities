@@ -6,26 +6,30 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-public class Cities 
+public class cities 
 {
 Map<String,List<String>> provinces = new HashMap();
-public Cities()
+public cities()
 {
     List<String> list = new ArrayList();
     list.add("Elblag");
+    list.add("Braniewo");
     provinces.put("Warminsko-Mazurskie",list);
+    List<String> list4 = Arrays.asList("Szczecin");
+    provinces.put("Zachodnio-pomorskie",list4);
     List<String> list2 = Arrays.asList("Gdansk","Sopot","Gdynia");
     provinces.put("Pomorskie",list2);
+    List<String> list3 = Arrays.asList("Warszawa");
+    provinces.put("Mazowieckie",list3);
  
 }
 public Collection<String> provinces()
 {
-    return provinces.keySet();
+   return provinces.keySet();
 }
-public Collection<String> cities(String province)
+public List<String> cities(String province)
 {
-    return provinces.get(provinces);
+ return provinces.get(province);
 }
 public String ktoreMiasto(String province,int n)
 {
@@ -54,10 +58,8 @@ public Collection<String> cities()
     }
     return m;
 }
-public static void main(String[] args)
+public int dodatkowa(String key)
 {
-    Cities l = new Cities();
-    System.out.println(l.provinces);
+    return provinces.get(key).size();
 }
 }
-
